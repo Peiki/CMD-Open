@@ -16,13 +16,13 @@ public class Cmd {
 			for(int i=0;i<s.length();i++)
 				pressKey(Character.toString(s.charAt(i)));
 			pressKey("ENTER");
-			s="javac Ciao.java";
+			s="javac ciao.java";
 			r.delay(100);
 			for(int i=0;i<s.length();i++)
 				pressKey(Character.toString(s.charAt(i)));
 			pressKey("ENTER");
 			r.delay(1000);
-			s="java Ciao";
+			s="java ciao";
 			for(int i=0;i<s.length();i++)
 				pressKey(Character.toString(s.charAt(i)));
 			pressKey("ENTER");
@@ -294,7 +294,12 @@ public class Cmd {
 			r.keyRelease(KeyEvent.VK_ALT);
 			break;
 		case "^":
-			r.keyPress(KeyEvent.VK_CIRCUMFLEX);
+			r.keyPress(KeyEvent.VK_ALT);
+			r.keyPress(KeyEvent.VK_NUMPAD9);
+			r.keyPress(KeyEvent.VK_NUMPAD4);
+			r.keyRelease(KeyEvent.VK_NUMPAD9);
+			r.keyRelease(KeyEvent.VK_NUMPAD4);
+			r.keyRelease(KeyEvent.VK_ALT);
 			break;
 		case "_": 
 			r.keyPress(KeyEvent.VK_SHIFT);
